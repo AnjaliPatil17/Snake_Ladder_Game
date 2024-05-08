@@ -11,8 +11,8 @@ public class Snake_Ladder_Game {
         System.out.println("Welcome to Snake and Ladder Game!");
         System.out.println("Starting Position of the Player = 0");
 
-        for(current_position=1;current_position <= 100;current_position++) {
-            diceRoll = (int) ((Math.random() * 6) + 1);
+        for(current_position=1;current_position < 100;current_position++) {
+            diceRoll = (int) ((Math.random() * 6) );
             System.out.println("Dice Number :" + diceRoll);
 
             current_position = current_position +diceRoll;
@@ -106,6 +106,14 @@ public class Snake_Ladder_Game {
                 current_position -= diceRoll;
                 System.out.println("You got a snake.");
                 System.out.println("You at position: "+current_position);
+            }
+
+            if(current_position <0)
+                current_position = 0;
+
+
+            if(current_position == max_position){
+                System.out.println("Congratulations, You win the game!");
             }
 
         }
