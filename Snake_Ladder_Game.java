@@ -7,5 +7,8 @@ public class Snake_Ladder_Game {
         int max_position = 100;
 
         System.out.println("Welcome to Snake and Ladder Game!");
+
+        System.out.println("Current position :" + current_position);
+
     }
 }
